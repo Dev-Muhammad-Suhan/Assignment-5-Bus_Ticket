@@ -1,11 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P-Ticket</title>
-</head>
-<body>
+    <!-- Fonts Font -->
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- DaisyUI and Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
     
+</head>
+
+<body>
+    <header class="container mx-auto">
+        <!-- Nav Bar -->
+        <nav>
+            <div class="navbar bg-base-100 border rounded-lg">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li class="nav-link-style"><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-xl text-4xl font-extrabold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn px-7 border-[#1DD10066] bg-[#1DD1001A] text-[#1DD100]">Bus <span><img src="./images/bus-icon.png" alt=""></span></a>
+                </div>
+            </div>
+        </nav>
+        <!-- Banner Section -->
+        <section class="mt-7">
+            <div class="hero rounded-3xl md:h-[400px] lg:h-[600px] bg-no-repeat bg-top bg-cover" style="background-image: url(./images/banner.png);">
+                <!-- Overlay -->
+                <div class="hero-overlay rounded-3xl bg-opacity-10"></div>
+                <!-- Banner Content -->
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-4xl">
+                    <h1 class="mb-5 text-5xl leading-normal font-bold"><span class="text-white font-extrabold">End-to-End Travel with</span><br><span class="text-[#1DD100] font-extrabold" >P Paribahan</span></h1>
+                    <p class="mb-5 max-w-[600px] text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+                    <button class="btn text-black hover:text-white hover:border-[#1DD100] hover:bg-[#1cd100c8] border-[#1cd100ab] bg-[#1DD100] btn-primary">Get Started</button>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="container mx-auto">
+        <!-- Offer Section -->
+        <section class="text-center my-28">
+            <h1 class="text-4xl font-bold">Best offers for you</h1>
+            <!-- Coupons -->
+            <div class="my-14 flex flex-col lg:flex-row gap-6 justify-between">
+                <div class="h-56 rounded-3xl w-full lg:w-1/2 bg-[#FFBF0F] flex items-center justify-between p-3 lg:p-12">
+                    <div class="w-full text-start">
+                        <h2 class="text-xl lg:text-4xl font-extrabold">15% OFF</h2>
+                        <p class="text-sm lg:text-xl font-semibold text-black">on your next purchase</p>
+                        <p class="text-[#03071280] text-lg font-medium">use by January 2024</p>
+                    </div>
+                    <div class="h-56 w-24 bg-contain bg-no-repeat" style="background-image: url(./images/cupon-devider.png);" ></div>
+                    <div class="w-1/2">
+                        <h3 class="text-black text-lg lg:text-3xl font-bold">NEW15</h3>
+                        <p class="text-[#03071280] text-sm lg:text-lg font-medium">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="h-56 rounded-3xl w-full lg:w-1/2 bg-[#F78C9C] flex items-center justify-between p-3 lg:p-12">
+                    <div class="w-full text-start">
+                        <h2 class="text-xl lg:text-4xl font-extrabold">20% OFF</h2>
+                        <p class="text-sm lg:text-xl font-semibold text-black">on your next purchase</p>
+                        <p class="text-[#03071280] text-lg font-medium">use by January 2024</p>
+                    </div>
+                    <div class="h-56 w-24 bg-contain bg-no-repeat" style="background-image: url(./images/cupon-devider.png);" ></div>
+                    <div class="w-1/2">
+                        <h3 class="text-black text-lg lg:text-3xl font-bold">Couple 20</h3>
+                        <p class="text-[#03071280] text-sm lg:text-lg font-medium">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-outline btn-success">Success</button>
+        </section>
+    </main>
+    <footer class="bg-black py-28">
+        <div class="container mx-auto footer flex flex-col lg:flex-row justify-between text-neutral-content mb-16">
+            <aside class="text-center lg:text-start w-full lg:w-1/2">
+                <h1 class="text-white w-full text-4xl font-extrabold mb-4">P-Ticket</h1>
+              <p class="leading-8 w-full">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+            </aside> 
+            <nav class="flex justify-center lg:justify-end lg:text-start w-full lg:w-1/2"> 
+              <div>
+                <h6 class="text-white text-center w-full text-xl pb-5 font-semibold">Download our app</h6>
+                <img class="" src="./images/PlayStore.svg" alt="">
+              </div>
+            </nav>
+        </div>
+        <div class="container mx-auto">
+            <hr class="border-dashed border-gray-500">
+            <div class="mt-9 flex flex-col lg:flex-row items-center justify-between">
+                <div class="text-center lg:text-start mb-4">
+                    <p class=" text-gray-400">@all rights reserved, P-Ticket services limited.2024</p>
+                </div>
+                <div class="flex text-center gap-1 lg:gap-8 flex-col text-white lg:flex-row">
+                    <a href="">Terms & condition</a>
+                    <a href="">Return & refund policy</a>
+                    <a href="">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+          
+    </footer>
 </body>
+
 </html>
