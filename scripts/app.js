@@ -6,39 +6,54 @@ let gTotal = 0;
 // -------------
 for (btn of allBtn) {
     btn.addEventListener("click", function (event) {
-        // Change BG-Color
-        event.target.style.backgroundColor = '#1DD100';
+        const userSelectedSeats = parseInt(document.getElementById("selected-total-seat").innerText);
 
-        // Set the Total Seat
-        count = count + 1;
-        setInnerText("selected-total-seat", count)
+        if (userSelectedSeats < 4) {
+            // Change BG-Color
+            event.target.style.backgroundColor = '#1DD100';
+            event.target.style.color = '#ffff'
 
-        // Total Seat left
-        seatLeft = seatLeft - 1;
-        setInnerText("seats-left", seatLeft)
+            // btn disable
+            const element = event.target;
+            const elementId = element.getAttribute("id")
+            document.getElementById(elementId).setAttribute("disabled", true);
 
-        // Set Total Price
-        totalPrice();
 
-        // Set Grand Total
-        grandTotal();
+            // Set the Total Seat
+            count = count + 1;
+            setInnerText("selected-total-seat", count)
 
-        // Adding New Element in Select-Your-Seat Section
-        const li = document.createElement('li');
+            // Total Seat left
+            seatLeft = seatLeft - 1;
+            setInnerText("seats-left", seatLeft)
 
-        const busSeatName = event.target.innerText;
-        const p1 = document.createElement('p');
-        p1.innerText = busSeatName;
-        li.appendChild(p1);
-        const p2 = document.createElement('p');
-        p2.innerText = 'Economy';
-        li.appendChild(p2);
-        const p3 = document.createElement('p');
-        p3.innerText = '550';
-        li.appendChild(p3);
+            // Set Total Price
+            totalPrice();
 
-        document.getElementById("new-element").appendChild(li);
+            // Set Grand Total
+            grandTotal();
 
+            // Adding New Element in Select-Your-Seat Section
+            const li = document.createElement('li');
+
+            const busSeatName = event.target.innerText;
+            const p1 = document.createElement('p');
+            p1.innerText = busSeatName;
+            li.appendChild(p1);
+            const p2 = document.createElement('p');
+            p2.innerText = 'Economy';
+            li.appendChild(p2);
+            const p3 = document.createElement('p');
+            p3.innerText = '550';
+            li.appendChild(p3);
+
+            document.getElementById("new-element").appendChild(li);
+
+            // Maximum Seat Count Per User
+        }
+        else{
+            alert("You cannot buy more than 4 seats.!")
+        }
 
     })
 }
@@ -53,7 +68,7 @@ function applyCoupon() {
     const convertedGrandTotalCost = parseInt(grandTotalCost);
     const coupon1_Discount = 0.15;
     const coupon2_Discount = 0.2;
-    
+
     // APPLY COUPON CONDITION
     if (enteredCouponInput == coupon1) {
         const getDiscount = convertedGrandTotalCost * coupon1_Discount;
@@ -63,7 +78,7 @@ function applyCoupon() {
 
         document.getElementById("coupon-container").classList.add('hidden');
     }
-    else if (enteredCouponInput == coupon2){
+    else if (enteredCouponInput == coupon2) {
         const getDiscount = convertedGrandTotalCost * coupon2_Discount;
         const newGrandTotalCost = convertedGrandTotalCost - getDiscount;
 
