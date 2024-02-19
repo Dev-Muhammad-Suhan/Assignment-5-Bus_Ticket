@@ -7,7 +7,7 @@ let gTotal = 0;
 for (btn of allBtn) {
     btn.addEventListener("click", function (event) {
         // Change BG-Color
-
+        event.target.style.backgroundColor = '#1DD100';
 
         // Set the Total Seat
         count = count + 1;
