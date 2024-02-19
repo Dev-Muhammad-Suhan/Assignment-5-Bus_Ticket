@@ -135,7 +135,7 @@
                     </div>
                     <!-- Button -->
                     <div class="mt-4 lg:mt-0 text-center md:text-start lg:text-start">
-                      <a class="btn border-[#1DD10066] bg-[#1DD1001A] text-[#1DD100]"><span><img src="./images/seat-green.png" alt=""></span><span>40</span> Seats left</a>
+                      <a class="btn border-[#1DD10066] bg-[#1DD1001A] text-[#1DD100]"><span><img src="./images/seat-green.png" alt=""></span><span id="seats-left" >12</span> Seats left</a>
                     </div>
                   </div>
                   <!-- End -->
@@ -190,7 +190,7 @@
 
                 <!-- Row-1 -->
                 <div class="flex flex-row-reverse">
-                  <button class="btn px-5 bg-[#0307121A]"><span><img src="./images/driver-seet.svg" alt=""></span></button>
+                  <button class="btn px-5 bg-[#00000039]"><span><img src="./images/driver-seet.svg" alt=""></span></button>
                 </div>
                 <!-- Row-2 -->
                 <div class="mt-6 flex gap-[5px] justify-between">
@@ -199,10 +199,10 @@
 
                     <div>A</div>
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>A1</span></button>
+                      <button id="a1" class="bus-seat btn px-4 lg:px-7">A1</button>
                     </div>
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>A2</span></button>
+                      <button id="a2" class="bus-seat btn px-4 lg:px-7">A2</button>
                     </div>
 
                   </div>
@@ -210,10 +210,10 @@
                   <div class="flex gap-[6px] lg:gap-6 justify-between items-center">
 
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>A3</span></button>
+                      <button id="a3" class="bus-seat btn px-4 lg:px-7">A3</button>
                     </div>
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>A4</span></button>
+                      <button id="a4" class="bus-seat btn px-4 lg:px-7">A4</button>
                     </div>
 
                   </div>
@@ -226,10 +226,10 @@
 
                     <div>B</div>
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>B1</span></button>
+                      <button id="b1" class="bus-seat btn px-4 lg:px-7">B1</button>
                     </div>
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>B2</span></button>
+                      <button id="b2" class="bus-seat btn px-4 lg:px-7">B2</button>
                     </div>
 
                   </div>
@@ -237,10 +237,10 @@
                   <div class="flex gap-[6px] lg:gap-6 justify-between items-center">
 
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>B3</span></button>
+                      <button id="b3" class="bus-seat btn px-4 lg:px-7">B3</button>
                     </div>
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>B4</span></button>
+                      <button id="b4" class="bus-seat btn px-4 lg:px-7">B4</button>
                     </div>
 
                   </div>
@@ -253,10 +253,10 @@
 
                     <div>C</div>
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>C1</span></button>
+                      <button id="c1" class="bus-seat btn px-4 lg:px-7">C1</button>
                     </div>
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>C2</span></button>
+                      <button id="c2" class="bus-seat btn px-4 lg:px-7">C2</button>
                     </div>
 
                   </div>
@@ -264,10 +264,10 @@
                   <div class="flex gap-[6px] lg:gap-6 justify-between items-center">
 
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>C3</span></button>
+                      <button id="c3" class="bus-seat btn px-4 lg:px-7">C3</button>
                     </div>
                     <div>
-                      <button class="btn px-4 lg:px-7"><span>C4</span></button>
+                      <button id="c4" class="bus-seat btn px-4 lg:px-7">C4</button>
                     </div>
 
                   </div>
@@ -277,7 +277,7 @@
                 <!-- End Row -->
               </div>
 
-              <div class="border-2 border-gray-400 border-dashed my-5 lg:my-0 mx-0 lg:mx-5"></div>
+              <div class="border border-gray-400 border-dashed my-5 lg:my-0 mx-0 lg:mx-5"></div>
 
               <!-- Side-2 -->
               <div class="w-full lg:w-2/5">
@@ -291,7 +291,7 @@
                 <div class=" bg-[#F7F8F8] p-8 rounded-3xl">
                   <!-- 1 -->
                   <div class="flex justify-between items-center">
-                    <h3 class="font-medium mt-6">Seat <span  class="badge text-white bg-[#1DD100]">0</span> </h3>
+                    <h3 class="font-medium mt-6">Seat <span id="selected-total-seat"  class="badge text-white bg-[#1DD100]">0</span> </h3>
                     <h3 class="font-medium mt-6">Class</h3>
                     <h3 class="font-medium mt-6">Price</h3>
                   </div>
@@ -300,29 +300,32 @@
                   <!-- 2 -->
                   <div>
                   <!-- Dynamic Added Div -->
+                    <ul id="new-element" class="li-container">
+                      
+                    </ul>
 
                   </div>
-                  <div class="border my-5"></div>
+                  <div class="border mb-4"></div>
                   
                   <!-- 3 -->
                   <div class="flex justify-between">
                     <h3 class="font-medium mt-6 mb-6">Total Price</h3>
-                    <h3 class="font-medium mt-6 mb-6">BDT <span>0</span> </h3>
+                    <h3 class="font-medium mt-6 mb-6">BDT <span id="total-price">0</span> </h3>
                   </div>
 
                   <!-- 4 -->
-                  <div>
+                  <div id="coupon-container" class="">
                   <!-- Coupon -->
-                  <label class="input input-bordered flex items-center gap-2">
-                    <input type="text" class="w-full lg:grow" placeholder="Search" />
-                    <span class="btn btn-sm border-none hover:bg-[#99d88f] text-white bg-[#1DD100]">Apply</span>
-                  </label>
+                    <label class="input input-bordered border-none flex items-center gap-2">
+                      <input id="coupon-input" type="text" class="w-full lg:grow" placeholder="Have any coupon?" />
+                      <span onclick="applyCoupon()" class="btn btn-sm border-none hover:bg-[#99d88f] text-white bg-[#1DD100]">Apply</span>
+                    </label>
                   </div>
 
                   <!-- 5 -->
                   <div class="flex justify-between">
                     <h3 class="font-medium mt-6">Grand Total</h3>
-                    <h3 class="font-medium mt-6">BDT <span>0</span> </h3>
+                    <h3 class="font-medium mt-6">BDT <span id="grand-total">0</span> </h3>
                   </div>
 
                 </div>
@@ -330,7 +333,7 @@
                 <div class="border border-dashed my-5"></div>
 
                 <div>
-                  <button class="btn hover:text-black hover:bg-[#1cd1002b] text-white w-full bg-[#1DD100]">Apply</button>
+                  <button class="btn hover:text-black hover:bg-[#1cd1002b] text-white w-full bg-[#1DD100]">Next</button>
                 </div>
 
                 <div class="flex justify-around mt-6">
@@ -373,6 +376,8 @@
             </div>
         </div>       
     </footer>
+    <!-- JS -->
+    <script src="./scripts/app.js"></script>
 </body>
 
 </html>

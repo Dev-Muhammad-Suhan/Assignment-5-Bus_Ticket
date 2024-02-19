@@ -9,3 +9,12 @@
 }
 
 /* Sheared Style */
+.li-container > li {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.li-container > li > p{
+  color: gray;
+}
