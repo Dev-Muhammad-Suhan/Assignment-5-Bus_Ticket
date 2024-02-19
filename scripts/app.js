@@ -49,10 +49,9 @@ for (btn of allBtn) {
 
             document.getElementById("new-element").appendChild(li);
 
-            // Maximum Seat Count Per User
         }
-        else{
-            alert("You cannot buy more than 4 seats.!")
+        else {
+            alert("You cannot buy more than 4 seats!")
         }
 
     })
@@ -90,6 +89,7 @@ function applyCoupon() {
 
 
 // Utility
+
 
 // Set Total Price
 function totalPrice() {
